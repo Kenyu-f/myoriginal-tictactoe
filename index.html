@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>n×nマルバツゲーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>n×nマルバツゲーム</h1>
+    <h2>ルール:</h2>
+    <p>自分のマークでできるだけ盤面を占めてください。</p>
+    <p>マークが3回揃ったところからカウントされます。</p>
+    <p>盤面のサイズは3×3から10×10まで選べます。</p>
+    <p>対戦モードは人間同士の対戦か、人間とAI（ランダムにマークを打つだけですが、このゲームの特性上それなりに楽しめます）の対戦を選べます。</p>
+    <p>カウント方法:xxxxの場合、左側のxxxと右側のxxxがそれぞれカウントされてポイントは2点となります。故にxxxxxは3ポイント相当です。</p>
+        <a href="https://github.com/uyun-hirohamada-lover" target="_blank">開発者情報</a>
+    <div class="controls">
+      <label>盤面サイズ n:
+        <input type="number" id="size" value="5" min="3" max="10" />
+      </label>
+      <label>対戦モード:
+        <select id="mode">
+          <option value="human">人間 vs 人間</option>
+          <option value="ai">人間 vs AI</option>
+        </select>
+      </label>
+      <button onclick="init()">スタート</button>
+    </div>
+
+    <div id="board"></div>
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
